@@ -29,8 +29,7 @@ const modelInfo: ModelDatabase = {
 	"claude-3-haiku": {
 		id: "claude-3-haiku",
 		name: "Claude 3 Haiku",
-		description:
-			"Fastest and most compact model for near-instant responsiveness",
+		description: "Fastest and most compact model for near-instant responsiveness",
 		context: "200K tokens",
 		inputPricing: formatCents(0.25), // $0.25 -> 25¢
 		outputPricing: formatCents(1.25), // $1.25 -> 125¢
