@@ -6,6 +6,10 @@ app.get("/", (c) => {
 	return c.text("Hello Hono!");
 });
 
+app.get("/error", () => {
+	throw new Error("Test error");
+});
+
 // 404 handler
 app.notFound((c) => {
 	return c.text("Custom 404 Message", 404);
