@@ -1,4 +1,4 @@
-import { Hono } from "hono";
+import { OpenAPIHono } from "@hono/zod-openapi";
 
 // Define the type for model information
 interface ModelInfo {
@@ -17,7 +17,7 @@ type ModelDatabase = {
 	[key: string]: ModelInfo;
 };
 
-const app = new Hono();
+const app = new OpenAPIHono();
 
 // Convert dollars to cents
 const formatCents = (dollars: number): string => {

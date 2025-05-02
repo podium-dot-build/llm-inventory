@@ -7,7 +7,9 @@
 		"lint:fix": "biome lint --fix src"
 	},
 	"dependencies": {
-		"hono": "^4.7.8"
+		"@hono/zod-openapi": "^0.19.6",
+		"hono": "^4.7.8",
+		"zod": "^3.24.3"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
