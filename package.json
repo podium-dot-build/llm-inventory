@@ -3,7 +3,8 @@
 	"scripts": {
 		"dev": "bun run --hot src/index.ts",
 		"format": "biome format --write src",
-		"lint": "biome lint --write src"
+		"lint": "biome lint --write src",
+		"lint:fix": "biome lint --fix src"
 	},
 	"dependencies": {
 		"hono": "^4.7.8"
