@@ -1,4 +1,15 @@
-import { OpenAPIHono } from "@hono/zod-openapi";
+import app from "@/app";
+
+const port = 3000;
+
+// Start the Bun server with the correct event handling
+const server = Bun.serve({
+	fetch: app.fetch,
+	port: port,
+	development: process.env.NODE_ENV !== "production",
+});
+
+console.log(`Server is running on http://${server.hostname}:${server.port}`);
 
 // Define the type for model information
 interface ModelInfo {
@@ -16,8 +27,6 @@ interface ModelInfo {
 type ModelDatabase = {
 	[key: string]: ModelInfo;
 };
-
-const app = new OpenAPIHono();
 
 // Convert dollars to cents
 const formatCents = (dollars: number): string => {
@@ -89,10 +98,6 @@ const modelInfo: ModelDatabase = {
 	},
 };
 
-app.get("/", (c) => {
-	return c.text("Hello Hono!");
-});
-
 // Endpoint for AI model information
 app.get("/model/:modelName", (c) => {
 	const modelName = c.req.param("modelName");
@@ -108,5 +113,3 @@ app.get("/model/:modelName", (c) => {
 app.get("/models", (c) => {
 	return c.json(Object.keys(modelInfo));
 });
-
-export default app;
