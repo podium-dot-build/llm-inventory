@@ -13,6 +13,7 @@ export const modelInfo: ModelDatabase = {
 		inputCost: calculatePerTokenPrice(0.25),
 		outputCost: calculatePerTokenPrice(1.25),
 		strengths: "Quick and accurate targeted performance",
+		supports: ["text", "chat"],
 	},
 	"claude-3-sonnet": {
 		id: "claude-3-sonnet",
@@ -22,6 +23,7 @@ export const modelInfo: ModelDatabase = {
 		inputCost: calculatePerTokenPrice(3),
 		outputCost: calculatePerTokenPrice(15),
 		strengths: "High level of intelligence and capability",
+		supports: ["text", "chat"],
 	},
 	"claude-3-opus": {
 		id: "claude-3-opus",
@@ -31,6 +33,7 @@ export const modelInfo: ModelDatabase = {
 		inputCost: calculatePerTokenPrice(15),
 		outputCost: calculatePerTokenPrice(75),
 		strengths: "Top-level intelligence, fluency, and understanding",
+		supports: ["text", "chat"],
 	},
 	"claude-3-5-sonnet": {
 		id: "claude-3-5-sonnet",
@@ -40,6 +43,7 @@ export const modelInfo: ModelDatabase = {
 		inputCost: calculatePerTokenPrice(3),
 		outputCost: calculatePerTokenPrice(15),
 		strengths: "High level of intelligence and capability",
+		supports: ["text", "chat"],
 	},
 	"claude-3-5-haiku": {
 		id: "claude-3-5-haiku",
@@ -49,6 +53,7 @@ export const modelInfo: ModelDatabase = {
 		inputCost: calculatePerTokenPrice(0.8),
 		outputCost: calculatePerTokenPrice(4),
 		strengths: "Intelligence at blazing speeds",
+		supports: ["text", "chat"],
 	},
 	"claude-3-7-sonnet": {
 		id: "claude-3-7-sonnet",
@@ -59,6 +64,7 @@ export const modelInfo: ModelDatabase = {
 		outputCost: calculatePerTokenPrice(15),
 		strengths:
 			"Highest level of intelligence and capability with toggleable extended thinking",
+		supports: ["text", "chat"],
 	},
 };
 

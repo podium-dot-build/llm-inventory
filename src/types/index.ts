@@ -36,6 +36,11 @@ export interface ModelInfo {
 	 * Key strengths of the model
 	 */
 	strengths: string;
+
+	/**
+	 * Supported prompt types
+	 */
+	supports: string[];
 }
 
 /**
