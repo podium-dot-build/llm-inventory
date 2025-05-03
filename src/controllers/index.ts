@@ -1,5 +1,5 @@
 import { NOT_FOUND, REASON_PHRASES } from "@/http-status";
-import { getAllModelIds, getModelById } from "@/services/models";
+import { getAllModelIds, getModelById } from "@/services";
 import type { Context } from "hono";
 
 /**

@@ -1,4 +1,4 @@
-import { getModel, listModels } from "@/controllers/models";
+import { getModel, listModels } from "@/controllers";
 import { OpenAPIHono } from "@hono/zod-openapi";
 
 /**

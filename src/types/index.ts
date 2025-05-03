@@ -20,17 +20,17 @@ export interface ModelInfo {
 	/**
 	 * Context window size
 	 */
-	context: string;
+	context: number;
 
 	/**
 	 * Pricing for input tokens
 	 */
-	inputPricing: number;
+	inputCost: number;
 
 	/**
 	 * Pricing for output tokens
 	 */
-	outputPricing: number;
+	outputCost: number;
 
 	/**
 	 * Key strengths of the model
