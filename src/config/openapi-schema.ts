@@ -8,8 +8,8 @@ export const ModelSchema = z.object({
 	name: z.string().describe("Model name"),
 	description: z.string().describe("Brief description of the model"),
 	context: z.number().describe("Context window size"),
-	inputCost: z.number().describe("Pricing for input tokens"),
-	outputCost: z.number().describe("Pricing for output tokens"),
+	inputCost: z.number().describe("Input cost per token"),
+	outputCost: z.number().describe("Output cost per token"),
 	strengths: z.string().describe("Key strengths of the model"),
 	supports: z.array(z.string()).describe("Supported prompt types"),
 });
@@ -27,7 +27,7 @@ export const ModelsListSchema = z.object({
  * OpenAPI schema for the entire API
  */
 export const openAPISchema = {
-	openapi: "3.0.0",
+	openapi: "1.0.0",
 	info: {
 		title: "AI Model Info API",
 		version: "1.0.0",
