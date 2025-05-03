@@ -1,24 +1,28 @@
+import notFound from "@/middlewares/not-found";
+import onError from "@/middlewares/on-error";
 import { OpenAPIHono } from "@hono/zod-openapi";
 
+/**
+ * Main application instance
+ * Configures the OpenAPI-enabled Hono app with routes and middleware
+ */
 const app = new OpenAPIHono();
 
+// Health check endpoint
 app.get("/", (c) => {
-	return c.text("Hello Hono!");
+	return c.json({
+		status: "ok",
+		version: "1.0.0",
+	});
 });
 
+// Test error endpoint
 app.get("/error", () => {
 	throw new Error("Test error");
 });
 
-// 404 handler
-app.notFound((c) => {
-	return c.text("Custom 404 Message", 404);
-});
-
-// 500 handler
-app.onError((err, c) => {
-	console.error(`${err}`);
-	return c.text("Custom Error Message", 500);
-});
+// Register global middleware
+app.notFound(notFound);
+app.onError(onError);
 
 export default app;
