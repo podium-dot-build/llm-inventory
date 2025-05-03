@@ -2,6 +2,8 @@
 	"name": "ai-model-info",
 	"scripts": {
 		"dev": "bun run --hot src/index.ts",
+		"build": "bun build src/index.ts --outdir ./dist --target node",
+		"start": "NODE_ENV=production bun ./dist/index.js",
 		"format": "biome format --write src",
 		"lint": "biome lint --write src",
 		"lint:fix": "biome lint --fix src"
