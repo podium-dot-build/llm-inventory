@@ -9,68 +9,86 @@ export const modelInfo: ModelDatabase = {
 	"claude-3-haiku": {
 		id: "claude-3-haiku",
 		name: "Claude 3 Haiku",
-		description: "Fastest and most compact model for near-instant responsiveness",
+		description:
+			"Fastest and most compact model for near-instant responsiveness with multimodal capabilities",
 		context: 200_000,
 		outputLimit: 4_096,
 		inputCost: 0.25,
 		outputCost: 1.25,
 		strengths: "Quick and accurate targeted performance",
-		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		input: [
+			{ type: "text", extensions: ["txt", "html", "md"] },
+			{ type: "image", extensions: ["png", "jpg", "jpeg", "gif", "webp"] },
+		],
 		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
-		systemPrompt: false,
+		systemPrompt: true,
 	},
 	"claude-3-opus": {
 		id: "claude-3-opus",
 		name: "Claude 3 Opus",
-		description: "Powerful model for complex tasks",
+		description: "Powerful model for complex tasks with multimodal capabilities",
 		context: 200_000,
 		outputLimit: 4_096,
 		inputCost: 15.0,
 		outputCost: 75.0,
 		strengths: "Top-level intelligence, fluency, and understanding",
-		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		input: [
+			{ type: "text", extensions: ["txt", "html", "md"] },
+			{ type: "image", extensions: ["png", "jpg", "jpeg", "gif", "webp"] },
+		],
 		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
-		systemPrompt: false,
+		systemPrompt: true,
 	},
 	"claude-3-5-haiku": {
 		id: "claude-3-5-haiku",
 		name: "Claude 3.5 Haiku",
-		description: "Our fastest model",
+		description: "Our fastest model with multimodal capabilities",
 		context: 200_000,
 		outputLimit: 8_192,
 		inputCost: 0.8,
 		outputCost: 4.0,
 		strengths: "Intelligence at blazing speeds",
-		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		input: [
+			{ type: "text", extensions: ["txt", "html", "md"] },
+			{ type: "image", extensions: ["png", "jpg", "jpeg", "gif", "webp"] },
+		],
 		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
-		systemPrompt: false,
+		systemPrompt: true,
 	},
 	"claude-3-5-sonnet": {
 		id: "claude-3-5-sonnet",
 		name: "Claude 3.5 Sonnet",
-		description: "High-capability model balancing intelligence and speed",
+		description:
+			"High-capability model balancing intelligence and speed with multimodal capabilities",
 		context: 200_000,
 		outputLimit: 8_192,
 		inputCost: 3.0,
 		outputCost: 15.0,
 		strengths: "High level of intelligence and capability",
-		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		input: [
+			{ type: "text", extensions: ["txt", "html", "md"] },
+			{ type: "image", extensions: ["png", "jpg", "jpeg", "gif", "webp"] },
+		],
 		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
-		systemPrompt: false,
+		systemPrompt: true,
 	},
 	"claude-3-7-sonnet": {
 		id: "claude-3-7-sonnet",
 		name: "Claude 3.7 Sonnet",
-		description: "Our most intelligent model with extended thinking mode",
+		description:
+			"Our most intelligent model with extended thinking mode and multimodal capabilities",
 		context: 200_000,
 		outputLimit: 64_000,
 		inputCost: 3.0,
 		outputCost: 15.0,
 		strengths:
 			"Highest intelligence and capability with toggleable extended reasoning",
-		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		input: [
+			{ type: "text", extensions: ["txt", "html", "md"] },
+			{ type: "image", extensions: ["png", "jpg", "jpeg", "gif", "webp"] },
+		],
 		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
-		systemPrompt: false,
+		systemPrompt: true,
 	},
 
 	// Perplexity Sonar Family
@@ -468,7 +486,7 @@ export const modelInfo: ModelDatabase = {
 	deepseek_v3_r1: {
 		id: "deepseek_v3_r1",
 		name: "DeepSeek v3 / R1",
-		description: "Sparse MoE model powering Perplexity’s top reasoning",
+		description: "Sparse MoE model powering Perplexity's top reasoning",
 		context: 128_000,
 		outputLimit: 8_192,
 		inputCost: 2.0,
@@ -520,6 +538,32 @@ export const modelInfo: ModelDatabase = {
 	},
 
 	// Cohere Command Series
+	"cohere-command": {
+		id: "cohere-command",
+		name: "Cohere Command",
+		description: "Original Cohere instruction-following model for general tasks",
+		context: 4_096,
+		outputLimit: 2_048,
+		inputCost: 1.5,
+		outputCost: 2.0,
+		strengths: "Accurate instruction following for general tasks",
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: true,
+	},
+	"cohere-command-light": {
+		id: "cohere-command-light",
+		name: "Cohere Command Light",
+		description: "Lightweight, faster variant of Cohere's Command model",
+		context: 4_096,
+		outputLimit: 2_048,
+		inputCost: 0.3,
+		outputCost: 0.6,
+		strengths: "High-speed responses for simpler tasks",
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: true,
+	},
 	cohere_command_r_plus: {
 		id: "cohere_command_r_plus",
 		name: "Command R+",
@@ -531,7 +575,7 @@ export const modelInfo: ModelDatabase = {
 		strengths: "Exceptional long-form instruction following and RAG",
 		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
 		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
-		systemPrompt: false,
+		systemPrompt: true,
 	},
 	cohere_command_r: {
 		id: "cohere_command_r",
@@ -544,7 +588,7 @@ export const modelInfo: ModelDatabase = {
 		strengths: "High throughput instruction following, cost-effective",
 		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
 		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
-		systemPrompt: false,
+		systemPrompt: true,
 	},
 
 	// Amazon Titan Text Family (Bedrock)
@@ -583,6 +627,161 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 0.8,
 		outputCost: 1.6,
 		strengths: "Efficient, customizable for fine-tuning tasks",
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
+	},
+
+	// OpenAI Models
+	"openai-gpt-4": {
+		id: "openai-gpt-4",
+		name: "GPT-4",
+		description: "OpenAI's advanced model with strong reasoning capabilities",
+		context: 8_192,
+		outputLimit: 2_048,
+		inputCost: 3.0,
+		outputCost: 6.0,
+		strengths: "Advanced reasoning and complex problem-solving",
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: true,
+	},
+	"openai-gpt-4o": {
+		id: "openai-gpt-4o",
+		name: "GPT-4o",
+		description: "OpenAI's multimodal model supporting text and image inputs",
+		context: 128_000,
+		outputLimit: 4_096,
+		inputCost: 5.0,
+		outputCost: 15.0,
+		strengths: "Multimodal reasoning and image understanding",
+		input: [
+			{ type: "text", extensions: ["txt", "html", "md"] },
+			{ type: "image", extensions: ["png", "jpg", "jpeg", "gif", "webp"] },
+		],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: true,
+	},
+	"openai-gpt-3.5-turbo": {
+		id: "openai-gpt-3.5-turbo",
+		name: "GPT-3.5 Turbo",
+		description: "OpenAI's cost-effective chat model for general-purpose tasks",
+		context: 16_384,
+		outputLimit: 4_096,
+		inputCost: 0.15,
+		outputCost: 0.2,
+		strengths: "Fast, cost-effective responses for everyday tasks",
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: true,
+	},
+	"openai-dall-e-2": {
+		id: "openai-dall-e-2",
+		name: "DALL·E 2",
+		description: "OpenAI's text-to-image generative model",
+		context: 1_000, // approximate token limit for prompt
+		outputLimit: 1, // produces one image per request
+		inputCost: 0.0,
+		outputCost: 20.0, // per image generation
+		strengths: "Generating diverse, high-quality images from text descriptions",
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "image", extensions: ["png", "jpg", "jpeg"] }],
+		systemPrompt: false,
+	},
+
+	// Google Gemini Models
+	"google-gemini-1.5-pro": {
+		id: "google-gemini-1.5-pro",
+		name: "Gemini 1.5 Pro",
+		description:
+			"Google's multimodal model with long context and multiple input types",
+		context: 1_000_000,
+		outputLimit: 32_768,
+		inputCost: 1.25,
+		outputCost: 5.0,
+		strengths: "Multimodal understanding with extremely long context",
+		input: [
+			{ type: "text", extensions: ["txt", "html", "md"] },
+			{ type: "image", extensions: ["png", "jpg", "jpeg", "gif", "webp"] },
+			{ type: "audio", extensions: ["mp3", "wav", "m4a", "ogg", "flac"] },
+			{ type: "video", extensions: ["mp4", "webm", "mov", "avi"] },
+		],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: true,
+	},
+
+	// Stability AI
+	"stable-diffusion-xl": {
+		id: "stable-diffusion-xl",
+		name: "Stable Diffusion XL 1.0",
+		description:
+			"Stability AI's open-source text-to-image model for generating high-resolution images",
+		context: 77, // approximately 77 tokens for CLIP text encoder
+		outputLimit: 1, // one image per generation
+		inputCost: 0.0,
+		outputCost: 40.0, // per 1000 images if hosted (~$0.04/image)
+		strengths: "Open-source image generation with fine-grained style control",
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "image", extensions: ["png", "jpg", "jpeg"] }],
+		systemPrompt: false,
+	},
+
+	// xAI Model
+	"xai-grok-1": {
+		id: "xai-grok-1",
+		name: "Grok 1",
+		description: "xAI's conversational model with real-time knowledge access",
+		context: 8_192,
+		outputLimit: 4_096,
+		inputCost: 0.0, // Free with subscription
+		outputCost: 0.0, // Free with subscription
+		strengths: "Real-time data access with conversational abilities",
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: true,
+	},
+
+	// Fireworks Models
+	"fireworks-llama-4-scout": {
+		id: "fireworks-llama-4-scout",
+		name: "Llama 4 Scout",
+		description: "General-purpose variant with large context window capability",
+		context: 1_000_000,
+		outputLimit: 64_000,
+		inputCost: 0.15,
+		outputCost: 0.6,
+		strengths: "Ideal for multi-document summarization and analysis",
+		input: [
+			{ type: "text", extensions: ["txt", "html", "md"] },
+			{ type: "image", extensions: ["png", "jpg", "jpeg", "gif", "webp"] },
+		],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
+	},
+	"fireworks-llama-4-maverick": {
+		id: "fireworks-llama-4-maverick",
+		name: "Llama 4 Maverick",
+		description: "Meta MoE multimodal model with 1M token memory",
+		context: 1_000_000,
+		outputLimit: 64_000,
+		inputCost: 0.22,
+		outputCost: 0.88,
+		strengths: "Expert routing, SOTA multimodal context handling",
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
+	},
+
+	// Mistral Model
+	"mistral-7b-instruct": {
+		id: "mistral-7b-instruct",
+		name: "Mistral 7B Instruct",
+		description: "Instruction-tuned variant of Mistral 7B for chat and tasks",
+		context: 32_000,
+		outputLimit: 2_048,
+		inputCost: 0.15,
+		outputCost: 0.2,
+		strengths: "Small, efficient model with long-context support",
 		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
 		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
 		systemPrompt: false,
