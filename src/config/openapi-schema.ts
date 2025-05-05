@@ -8,6 +8,7 @@ export const ModelSchema = z.object({
 	name: z.string().describe("Model name"),
 	description: z.string().describe("Brief description of the model"),
 	context: z.number().describe("Context window size"),
+	outputLimit: z.number().describe("Output token limit"),
 	inputCost: z.number().describe("Input cost per token"),
 	outputCost: z.number().describe("Output cost per token"),
 	strengths: z.string().describe("Key strengths of the model"),
@@ -79,6 +80,10 @@ export const openAPISchema = {
 										context: {
 											type: "number",
 											description: "Context window size",
+										},
+										outputLimit: {
+											type: "number",
+											description: "Output token limit",
 										},
 										inputCost: {
 											type: "number",

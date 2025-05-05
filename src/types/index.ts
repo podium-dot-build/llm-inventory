@@ -23,6 +23,11 @@ export interface ModelInfo {
 	context: number;
 
 	/**
+	 * Output token limit
+	 */
+	outputLimit: number;
+
+	/**
 	 * Pricing for input tokens
 	 */
 	inputCost: number;
