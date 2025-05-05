@@ -1,7 +1,40 @@
+export type TextModalityExtensions = "txt" | "html" | "md";
+export type ImageModalityExtensions =
+	| "png"
+	| "jpg"
+	| "jpeg"
+	| "gif"
+	| "webp"
+	| "svg"
+	| "heic"
+	| "heif";
+export type AudioModalityExtensions = "mp3" | "wav" | "m4a" | "ogg" | "flac";
+export type VideoModalityExtensions = "mp4" | "webm" | "mov" | "avi" | "mkv";
+export type FileModalityExtensions =
+	| "pdf"
+	| "doc"
+	| "docx"
+	| "xls"
+	| "xlsx"
+	| "ppt"
+	| "pptx";
+
+export type ModalExtensionType =
+	| TextModalityExtensions
+	| ImageModalityExtensions
+	| AudioModalityExtensions
+	| VideoModalityExtensions
+	| FileModalityExtensions;
+
+export type ModalityType = {
+	type: "text" | "image" | "audio" | "video" | "file";
+	extensions: ModalExtensionType[];
+};
+
 /**
  * Represents information about an AI model
  */
-export interface ModelInfo {
+export type ModelInfo = {
 	/**
 	 * Unique identifier
 	 */
@@ -45,8 +78,18 @@ export interface ModelInfo {
 	/**
 	 * Supported prompt types
 	 */
-	supports: string[];
-}
+	input: ModalityType[];
+
+	/**
+	 * Supported output types
+	 */
+	output: ModalityType[];
+
+	/**
+	 * Supported system prompt types
+	 */
+	systemPrompt: boolean;
+};
 
 /**
  * Collection of models indexed by ID

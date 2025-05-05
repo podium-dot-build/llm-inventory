@@ -15,7 +15,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 0.25,
 		outputCost: 1.25,
 		strengths: "Quick and accurate targeted performance",
-		supports: ["text", "chat", "image"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 	"claude-3-opus": {
 		id: "claude-3-opus",
@@ -26,7 +28,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 15.0,
 		outputCost: 75.0,
 		strengths: "Top-level intelligence, fluency, and understanding",
-		supports: ["text", "chat", "image"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 	"claude-3-5-haiku": {
 		id: "claude-3-5-haiku",
@@ -37,7 +41,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 0.8,
 		outputCost: 4.0,
 		strengths: "Intelligence at blazing speeds",
-		supports: ["text", "chat", "image"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 	"claude-3-5-sonnet": {
 		id: "claude-3-5-sonnet",
@@ -48,7 +54,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 3.0,
 		outputCost: 15.0,
 		strengths: "High level of intelligence and capability",
-		supports: ["text", "chat", "image"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 	"claude-3-7-sonnet": {
 		id: "claude-3-7-sonnet",
@@ -60,7 +68,9 @@ export const modelInfo: ModelDatabase = {
 		outputCost: 15.0,
 		strengths:
 			"Highest intelligence and capability with toggleable extended reasoning",
-		supports: ["text", "chat", "image"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 
 	// Perplexity Sonar Family
@@ -73,7 +83,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 3.0,
 		outputCost: 15.0,
 		strengths: "In-depth answers with extensive citations and grounded reasoning",
-		supports: ["text", "chat"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 	perplexity_sonar: {
 		id: "perplexity_sonar",
@@ -84,7 +96,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 1.0,
 		outputCost: 1.0,
 		strengths: "Fast factual queries with real-time citations",
-		supports: ["text", "chat"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 	perplexity_sonar_reasoning_pro: {
 		id: "perplexity_sonar_reasoning_pro",
@@ -95,7 +109,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 2.0,
 		outputCost: 8.0,
 		strengths: "Deep chain-of-thought analysis with integrated retrieval",
-		supports: ["text", "chat"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 	perplexity_sonar_reasoning: {
 		id: "perplexity_sonar_reasoning",
@@ -106,7 +122,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 1.0,
 		outputCost: 5.0,
 		strengths: "Step-by-step logical reasoning with citations",
-		supports: ["text", "chat"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 	perplexity_sonar_deep_research: {
 		id: "perplexity_sonar_deep_research",
@@ -117,7 +135,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 2.0,
 		outputCost: 8.0,
 		strengths: "Comprehensive white-paper style outputs from multiple sources",
-		supports: ["text", "chat"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 	perplexity_r1_1776: {
 		id: "perplexity_r1_1776",
@@ -129,7 +149,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 2.0,
 		outputCost: 8.0,
 		strengths: "Consistent, uncensored responses without external search",
-		supports: ["text", "chat"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 
 	// Mistral AI Models
@@ -143,7 +165,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 0.0,
 		outputCost: 0.0,
 		strengths: "Strong performance on benchmarks, efficient inference",
-		supports: ["text"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 	mistral_7b_instruct: {
 		id: "mistral_7b_instruct",
@@ -154,7 +178,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 0.0,
 		outputCost: 0.0,
 		strengths: "High-quality instruction following, chat-optimized",
-		supports: ["text", "chat"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 	mistral_nemo_12b_base: {
 		id: "mistral_nemo_12b_base",
@@ -165,7 +191,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 0.0,
 		outputCost: 0.0,
 		strengths: "State-of-the-art multilingual and coding performance",
-		supports: ["text", "chat", "code"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 	mistral_nemo_12b_instruct: {
 		id: "mistral_nemo_12b_instruct",
@@ -176,7 +204,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 0.0,
 		outputCost: 0.0,
 		strengths: "Aligned for multi-turn dialogue and instruction following",
-		supports: ["text", "chat", "code"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 	mistral_mixtral_8x7b: {
 		id: "mistral_mixtral_8x7b",
@@ -188,7 +218,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 0.0,
 		outputCost: 0.0,
 		strengths: "High efficiency MoE, strong coding and reasoning",
-		supports: ["text", "chat"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 	mistral_mixtral_8x7b_instruct: {
 		id: "mistral_mixtral_8x7b_instruct",
@@ -199,7 +231,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 0.0,
 		outputCost: 0.0,
 		strengths: "Top open-source instruction quality, GPT-3.5-level alignment",
-		supports: ["text", "chat"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 
 	// xAI Grok Models
@@ -212,7 +246,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 3.0,
 		outputCost: 15.0,
 		strengths: "Complex reasoning, data extraction, code assistance",
-		supports: ["text", "chat"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 	xai_grok_3_mini_beta: {
 		id: "xai_grok_3_mini_beta",
@@ -223,7 +259,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 0.3,
 		outputCost: 0.5,
 		strengths: "Efficient quantitative reasoning with high accuracy",
-		supports: ["text", "chat"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 	xai_grok_2_vision_1212: {
 		id: "xai_grok_2_vision_1212",
@@ -234,7 +272,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 2.0,
 		outputCost: 10.0,
 		strengths: "Image understanding and integrated visual reasoning",
-		supports: ["text", "image"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 	xai_grok_2_image_1212: {
 		id: "xai_grok_2_image_1212",
@@ -245,7 +285,19 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 0.0,
 		outputCost: 0.07, // per image
 		strengths: "High-quality, multi-style image generation",
-		supports: ["image"],
+		input: [
+			{
+				type: "image",
+				extensions: ["png", "jpg", "jpeg", "gif", "webp", "heic", "heif"],
+			},
+		],
+		output: [
+			{
+				type: "image",
+				extensions: ["png", "jpg", "jpeg", "gif", "webp", "heic", "heif"],
+			},
+		],
+		systemPrompt: false,
 	},
 
 	// Groq Llama-3 Tool-Use Models
@@ -258,7 +310,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 0.0,
 		outputCost: 0.0,
 		strengths: "Superior tool-use accuracy and structured outputs",
-		supports: ["text", "chat"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 	groq_llama3_8b_tool_use: {
 		id: "groq_llama3_8b_tool_use",
@@ -269,7 +323,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 0.0,
 		outputCost: 0.0,
 		strengths: "Efficient multi-step reasoning with tool integration",
-		supports: ["text", "chat"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 
 	// Inception Mercury Coder
@@ -282,7 +338,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 0.0,
 		outputCost: 0.0,
 		strengths: "737 tokens/sec code throughput, high accuracy",
-		supports: ["text"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 	inception_mercury_coder_mini: {
 		id: "inception_mercury_coder_mini",
@@ -293,7 +351,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 0.0,
 		outputCost: 0.0,
 		strengths: "1,109 tokens/sec, excellent for real-time dev assistance",
-		supports: ["text"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 
 	// Google Gemini Series
@@ -306,7 +366,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 1.25,
 		outputCost: 5.0,
 		strengths: "SOTA reasoning, coding, and vision; MMLU >90%",
-		supports: ["text", "chat", "image", "code"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 	google_gemini_flash: {
 		id: "google_gemini_flash",
@@ -317,7 +379,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 0.075,
 		outputCost: 0.3,
 		strengths: "Fast, cost-effective generation with 1M memory",
-		supports: ["text", "chat", "image"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 	google_gemini_flash_8b: {
 		id: "google_gemini_flash_8b",
@@ -328,7 +392,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 0.0375,
 		outputCost: 0.15,
 		strengths: "Low-cost chat and text tasks with huge memory",
-		supports: ["text", "chat", "image"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 	google_gemini_ultra: {
 		id: "google_gemini_ultra",
@@ -339,7 +405,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 0.0, // preview
 		outputCost: 0.0, // preview
 		strengths: "Exceeds GPT-4 on vision and multimodal benchmarks",
-		supports: ["text", "chat", "image"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 
 	// Fireworks AI
@@ -352,7 +420,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 0.0,
 		outputCost: 0.0,
 		strengths: "Exceptional multi-step reasoning via ensemble inference",
-		supports: ["text", "chat"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 	fireworks_f1_mini: {
 		id: "fireworks_f1_mini",
@@ -363,7 +433,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 0.0,
 		outputCost: 0.0,
 		strengths: "Compact ensemble reasoning with good accuracy",
-		supports: ["text", "chat"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 	fireworks_llama4_maverick: {
 		id: "fireworks_llama4_maverick",
@@ -374,7 +446,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 0.22,
 		outputCost: 0.88,
 		strengths: "Expert routing, SOTA multimodal context handling",
-		supports: ["text", "chat", "image"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 	fireworks_llama4_scout: {
 		id: "fireworks_llama4_scout",
@@ -385,7 +459,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 0.15,
 		outputCost: 0.6,
 		strengths: "Ideal for multi-document summarization and analysis",
-		supports: ["text", "chat", "image"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 
 	// DeepSeek (R1)
@@ -398,7 +474,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 2.0,
 		outputCost: 8.0,
 		strengths: "Efficient MoE reasoning with offline/online modes",
-		supports: ["text", "chat"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 
 	// DeepInfra Models
@@ -411,7 +489,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 0.7,
 		outputCost: 2.18,
 		strengths: "State-of-the-art mathematical reasoning and proofs",
-		supports: ["text", "chat"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 	deepinfra_llama_guard_4: {
 		id: "deepinfra_llama_guard_4",
@@ -422,7 +502,21 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 0.05,
 		outputCost: 0.05,
 		strengths: "Robust multilingual text/image safety classification",
-		supports: ["text", "image"],
+		input: [
+			{ type: "text", extensions: ["txt", "html", "md"] },
+			{
+				type: "image",
+				extensions: ["png", "jpg", "jpeg", "gif", "webp", "heic", "heif"],
+			},
+		],
+		output: [
+			{ type: "text", extensions: ["txt", "html", "md"] },
+			{
+				type: "image",
+				extensions: ["png", "jpg", "jpeg", "gif", "webp", "heic", "heif"],
+			},
+		],
+		systemPrompt: false,
 	},
 
 	// Cohere Command Series
@@ -435,7 +529,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 3.0,
 		outputCost: 15.0,
 		strengths: "Exceptional long-form instruction following and RAG",
-		supports: ["text", "chat"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 	cohere_command_r: {
 		id: "cohere_command_r",
@@ -446,7 +542,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 0.5,
 		outputCost: 1.5,
 		strengths: "High throughput instruction following, cost-effective",
-		supports: ["text", "chat"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 
 	// Amazon Titan Text Family (Bedrock)
@@ -459,7 +557,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 0.8, // $0.0008 per 1K → $0.8 per 1M
 		outputCost: 1.6, // $0.0016 per 1K → $1.6 per 1M
 		strengths: "High-capacity text generation and RAG support",
-		supports: ["text", "chat"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 	amazon_titan_text_express_v1: {
 		id: "amazon_titan_text_express_v1",
@@ -470,7 +570,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 0.8,
 		outputCost: 1.6,
 		strengths: "Fast, cost-efficient chat with retrieval support",
-		supports: ["text", "chat"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 	amazon_titan_text_lite_v1: {
 		id: "amazon_titan_text_lite_v1",
@@ -481,7 +583,9 @@ export const modelInfo: ModelDatabase = {
 		inputCost: 0.8,
 		outputCost: 1.6,
 		strengths: "Efficient, customizable for fine-tuning tasks",
-		supports: ["text", "chat"],
+		input: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		output: [{ type: "text", extensions: ["txt", "html", "md"] }],
+		systemPrompt: false,
 	},
 };
 
