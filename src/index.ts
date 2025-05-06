@@ -1,5 +1,6 @@
 import app from "@/app";
 import modelsRouter from "@/routes";
+import db from "@/db"; // initialize and seed DB via db module
 
 // Server configuration
 const PORT = process.env.PORT ? Number.parseInt(process.env.PORT, 10) : 3002;
