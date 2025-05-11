@@ -20,4 +20,12 @@ db.run(`
   );
 `);
 
+// List all tables
+const tables = db.query("SELECT name FROM sqlite_master WHERE type='table';").all();
+console.log("Tables:", tables);
+
+// Read data from a specific table (replace 'tablename' with your table)
+const rows = db.query("SELECT * FROM model_info;").all();
+console.log(rows);
+
 export default db;
