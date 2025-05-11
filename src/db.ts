@@ -16,7 +16,8 @@ db.run(`
     outputCost REAL NOT NULL,
     systemPrompt INTEGER NOT NULL,
     input JSON NOT NULL,
-    output JSON NOT NULL
+    output JSON NOT NULL,
+    pricingPage TEXT
   );
 `);
 

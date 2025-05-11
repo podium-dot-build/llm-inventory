@@ -24,6 +24,7 @@ export const ModelSchema = z.object({
 	input: z.array(ModalityTypeSchema).describe("Supported input modalities"),
 	output: z.array(ModalityTypeSchema).describe("Supported output modalities"),
 	systemPrompt: z.boolean().describe("Whether system prompts are supported"),
+	pricingPage: z.string().optional().describe("URL to the model's pricing page"),
 });
 
 export const ErrorResponseSchema = z.object({
@@ -179,6 +180,11 @@ export const openAPISchema = {
 											},
 											description: "Supported output modalities",
 										},
+										pricingPage: {
+											type: "string",
+											description:
+												"URL to the model's pricing page",
+										},
 									},
 									example: {
 										id: "claude-3-7-sonnet",
@@ -214,6 +220,7 @@ export const openAPISchema = {
 												extensions: ["txt", "html", "md"],
 											},
 										],
+										pricingPage: "https://www.anthropic.com/pricing",
 									},
 								},
 							},

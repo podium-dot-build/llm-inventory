@@ -42,8 +42,8 @@ export const createModel = async (c: Context) => {
 		const stmt = db.prepare(`
 			INSERT INTO model_info (
 				id, name, description, strengths, context, outputLimit, 
-				inputCost, outputCost, systemPrompt, input, output
-			) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+				inputCost, outputCost, systemPrompt, input, output, pricingPage
+			) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 		`);
 
 		stmt.run(
@@ -58,6 +58,7 @@ export const createModel = async (c: Context) => {
 			body.systemPrompt ? 1 : 0,
 			JSON.stringify(body.input),
 			JSON.stringify(body.output),
+			body.pricingPage,
 		);
 
 		return c.json(
@@ -145,6 +146,10 @@ export const updateModel = async (c: Context) => {
 		if (body.output !== undefined) {
 			fields.push("output = ?");
 			values.push(JSON.stringify(body.output));
+		}
+		if (body.pricingPage !== undefined) {
+			fields.push("pricingPage = ?");
+			values.push(body.pricingPage);
 		}
 
 		// Add model ID at the end for the WHERE clause

@@ -89,6 +89,11 @@ export type ModelInfo = {
 	 * Supported system prompt types
 	 */
 	systemPrompt: boolean;
+
+	/**
+	 * Pricing page URL
+	 */
+	pricingPage: string;
 };
 
 /**
