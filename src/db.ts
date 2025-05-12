@@ -1,7 +1,13 @@
 import { Database } from "bun:sqlite";
 
-// Initialize the SQLite database file
-const db = new Database("./models.db");
+// Use Bun.env for DB path, fallback to sensible defaults
+const isProd = Bun.env.NODE_ENV === "production";
+console.log("isProd", isProd);
+const dbPath = isProd
+	? Bun.env.MODELS_DB_PATH || "db/models-prod.db"
+	: Bun.env.MODELS_DB_PATH || "db/dev/models.db";
+console.log("Using database file:", dbPath);
+const db = new Database(dbPath);
 
 // Create the model_info table if it doesn't exist with all fields from ModelInfo
 db.run(`
